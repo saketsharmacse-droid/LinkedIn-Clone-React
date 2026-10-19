@@ -16,6 +16,7 @@ const Login = (props) => {
                 <Hero>
                     <h1> Welcome to your Professional Community</h1>
                     <img src="/images/login-hero.svg" alt="" />
+
                 </Hero>
                 <Form>
                     <Google>
@@ -47,20 +48,6 @@ flex-wrap: nowrap;
     @media (max-width: 768px){
     padding: 0 5px;
     }
-    @media (max-width: 480px){
-        width: 110px;
-        flex-shrink: 0;
-    }
-}
-
-& > div {
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-}
-
-@media (max-width: 768px){
-    padding: 12px 16px 16px;
 }
 
 `;
@@ -72,17 +59,11 @@ const Join = styled.a`
     border-radius: 25px;
     color: rgba(0,0,0, 0.5);
     margin-right: 12px;
-    white-space: nowrap;
     &:hover {
         background-color: rgba(0,0,0, 0.08);
         color: rgba(0,0,0,0.9);
         text-decoration: none;
 
-    }
-    @media (max-width: 480px){
-        font-size: 14px;
-        padding: 8px 12px;
-        margin-right: 6px;
     }
 `;
 
@@ -97,16 +78,10 @@ const SignIn = styled.a`
     padding: 10px 24px;
     text-align: center;
     background-color: rgba(0,0,0,0);
-    white-space: nowrap;
     &:hover {
         background-color: rgba(112, 181, 249, 0.15);
         color: #0a66c2;
         text-decoration: none;
-    }
-    @media (max-width: 480px){
-        font-size: 14px;
-        line-height: 32px;
-        padding: 4px 16px;
     }
 `;
 
@@ -131,20 +106,9 @@ const Section = styled.section`
 
 const Hero = styled.div`
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-
-    @media (max-width: 768px){
-        flex-direction: column;
-        gap: 0;
-    }
-
     h1 {
         padding-bottom: 0;
-        flex: 1 1 50%;
-        width: 50%;
+        width: 55%;
         font-size: 56px;
         color: #2977c9;
         font-weight: 200;
@@ -157,28 +121,30 @@ const Hero = styled.div`
         }
     }
 
-    img {
-        flex: 1 1 50%;
-        width: 50%;
-        max-width: 600px;
-        height: auto;
-        object-fit: contain;
+    img{
+        /* z-index: -1; */
+        width: 700px;
+        height: 670px;
+        position: absolute;
+        bottom: -2px;
+        right: -150px;
         @media (max-width: 768px){
-            width: 100%;
-            max-width: 100%;
+            top: 230px;
+            width: initial;
+            position: initial;
+            height: initial;
+
         }
     }
+
+
 `;
 
 const Form = styled.div`
-    margin-top: 30px;
+    margin-top:100px;
     width: 408px;
     @media ( max-width: 768px){
-        margin: 20px auto 0;
-        width: 100%;
-        max-width: 408px;
-        padding: 0 16px;
-        box-sizing: border-box;
+        margin-top: 20px;
     }
     `;
 const Google = styled.button`
@@ -198,12 +164,6 @@ const Google = styled.button`
     &:hover {
         background-color: rgba(207, 207, 207, 0.25);
         color: rgba(0,0,0,0.75);
-    }
-    @media (max-width: 768px){
-        width: 100%;
-        padding: 15px 20px;
-        font-size: 18px;
-        box-sizing: border-box;
     }
 
 `;
